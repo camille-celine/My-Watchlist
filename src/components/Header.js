@@ -9,7 +9,8 @@ export const Header = () => {
           <div className="brand">
             <Link to="/">WatchList</Link>
           </div>
-          <ul className="nav-link">
+
+          <ul className="nav-links">
             <li>
               <Link to="/">Watch List</Link>
             </li>
