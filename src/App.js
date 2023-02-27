@@ -14,7 +14,7 @@ function App() {
       <Header/>
 
       <Routes>
-        <Route exact path="/" element={<Watchlist/>}/>
+        <Route exact path="/bookshelf" element={<Watchlist/>}/>
         <Route exact path="/watched" element={<Watched/>}/>
         <Route exact path="/add" element={<Add/>}/>
       </Routes>
