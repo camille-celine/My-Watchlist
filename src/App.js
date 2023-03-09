@@ -7,18 +7,22 @@ import {Watchlist} from './components/Watchlist';
 import './App.css';
 import './lib/font-awesome/css/all.min.css';
 
+import {GlobalProvider} from "./context/GlobalState";
+
 function App() {
   return (
-    <Router>
-      {/* on every single page */}
-      <Header/>
+    <GlobalProvider>
+      <Router>
+        {/* on every single page */}
+        <Header/>
 
-      <Routes>
-        <Route exact path="/bookshelf" element={<Watchlist/>}/>
-        <Route exact path="/watched" element={<Watched/>}/>
-        <Route exact path="/add" element={<Add/>}/>
-      </Routes>
-    </Router>
+        <Routes>
+          <Route exact path="/bookshelf" element={<Watchlist/>}/>
+          <Route exact path="/watched" element={<Watched/>}/>
+          <Route exact path="/add" element={<Add/>}/>
+        </Routes>
+      </Router>
+    </GlobalProvider>
   );
 }
 
