@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 
 export const Header = () => {
   return (
@@ -7,18 +7,18 @@ export const Header = () => {
       <div className="container">
         <div className="inner-content">
           <div className="brand">
-            <Link to="/bookshelf">WatchList</Link>
+            <NavLink to="/bookshelf">WatchList</NavLink>
           </div>
 
           <ul className="nav-links">
             <li>
-              <Link to="/bookshelf">Watch List</Link>
+              <NavLink to="/bookshelf">Watch List</NavLink>
             </li>
             <li>
-              <Link to="/watched">Watched</Link>
+              <NavLink to="/watched">Watched</NavLink>
             </li>
             <li>
-              <Link to="/add" className="btn">Add</Link>
+              <NavLink to="/add" className="btn">Add</NavLink>
             </li>
           </ul>
         </div>

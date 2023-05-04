@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { GlobalContext } from "../context/GlobalState";
+import {Link} from 'react-router-dom';
 // movie object as a prop
 export const ResultCard = ({movie}) => {
   const { addMovieToWatchlist, addMovieToWatched, watchlist, watched  } = useContext(GlobalContext);
@@ -25,7 +26,7 @@ export const ResultCard = ({movie}) => {
 
       <div className="info">
         <div className="header">
-          <h3 className="title">{movie.title}</h3>
+          <h3 className="title"><Link to={`/add/${movie.title}`}>{movie.title}</Link></h3>
           <h4 className="release-date">
             {movie.release_date ? (movie.release_date.substring(0, 4)) : "~"}
           </h4>
