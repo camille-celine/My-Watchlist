@@ -4,6 +4,7 @@ import {Header} from './components/Header';
 import {Add} from './components/Add';
 import {Watched} from './components/Watched';
 import {Watchlist} from './components/Watchlist';
+import {Movie} from './components/Movie';
 import NotFound from "./components/NotFound";
 import './App.css';
 import './lib/font-awesome/css/all.min.css';
@@ -22,6 +23,7 @@ function App() {
           <Route exact path="/bookshelf" element={<Watchlist/>}/>
           <Route exact path="/watched" element={<Watched/>}/>
           <Route exact path="/add" element={<Add/>}/>
+          <Route path="/add/:title" element={<Movie/>}/>
         </Routes>
       </Router>
     </GlobalProvider>
