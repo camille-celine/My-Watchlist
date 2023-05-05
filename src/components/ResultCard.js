@@ -26,7 +26,7 @@ export const ResultCard = ({movie}) => {
 
       <div className="info">
         <div className="header">
-          <h3 className="title"><Link to={`/add/${movie.title}`}>{movie.title}</Link></h3>
+          <h3 className="title"><Link to={`/add/${movie.title}`} state={{ movie: movie }}>{movie.title}</Link></h3>
           <h4 className="release-date">
             {movie.release_date ? (movie.release_date.substring(0, 4)) : "~"}
           </h4>
