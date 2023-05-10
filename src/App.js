@@ -2,6 +2,7 @@ import React from "react";
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import {Header} from './components/Header';
 import {Add} from './components/Add';
+import {About} from './components/About';
 import {Watched} from './components/Watched';
 import {Watchlist} from './components/Watchlist';
 import {Movie} from './components/Movie';
@@ -23,6 +24,7 @@ function App() {
           <Route exact path="/bookshelf" element={<Watchlist/>}/>
           <Route exact path="/watched" element={<Watched/>}/>
           <Route exact path="/add" element={<Add/>}/>
+          <Route exact path="/about" element={<About/>}/>
           <Route path="/add/:title" element={<Movie/>}/>
         </Routes>
       </Router>
