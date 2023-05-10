@@ -18,6 +18,9 @@ export const Header = () => {
               <NavLink to="/watched">Watched</NavLink>
             </li>
             <li>
+              <NavLink to="/about">About</NavLink>
+            </li>
+            <li>
               <NavLink to="/add" className="btn">Add</NavLink>
             </li>
           </ul>
