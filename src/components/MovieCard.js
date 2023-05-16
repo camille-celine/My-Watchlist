@@ -15,6 +15,12 @@ export const MovieCard = ({ movie, type }) => {
         )}
 
         <MovieControls movie={movie} type={type}/>
+        
+        <div className="info">
+          <div className="title">
+            {movie.title}
+          </div>
+        </div>
     </div>
   );
 };
