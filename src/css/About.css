@@ -1,0 +1,11 @@
+ /*  <---- About Page -----> */ 
+ .about-page {
+  background-color: var(--white);
+  height: 100vh;
+  /* stick block at the top */
+  display: flex;
+}
+
+.about-page p {
+  padding-left: 15px;
+}

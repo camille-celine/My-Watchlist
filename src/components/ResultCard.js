@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import '../css/ResultCard.css';
 import { GlobalContext } from "../context/GlobalState";
 import {Link} from 'react-router-dom';
 // movie object as a prop

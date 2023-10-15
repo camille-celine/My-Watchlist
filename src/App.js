@@ -7,7 +7,7 @@ import {Watched} from './components/Watched';
 import {Watchlist} from './components/Watchlist';
 import {Movie} from './components/Movie';
 import NotFound from "./components/NotFound";
-import './App.css';
+import './css/App.css';
 import './lib/font-awesome/css/all.min.css';
 
 import {GlobalProvider} from "./context/GlobalState";

@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { GlobalContext } from "../context/GlobalState";
+import '../css/MovieCard.css';
 
 export const MovieControls = ({type, movie}) => {
   const {removeMovieFromWatchlist, addMovieToWatched, moveToWatchlist, removeFromWatched} = useContext(GlobalContext);

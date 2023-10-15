@@ -1,4 +1,5 @@
 import React from 'react';
+import '../css/Movie.css';
 import { useLocation } from "react-router-dom";
 
 export const Movie = () => {
@@ -6,7 +7,7 @@ export const Movie = () => {
   const {movie} = location.state;
   
   return (
-    <div className="movie-page">
+    <div className="movie">
       <div className="container">
         <h1 className="title">{movie.title}</h1>
         <div className="release-date">{movie.release_date}</div>

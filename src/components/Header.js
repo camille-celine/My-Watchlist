@@ -1,5 +1,6 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
+import '../css/Header.css';
 
 export const Header = () => {
   return (
@@ -21,7 +22,7 @@ export const Header = () => {
               <NavLink to="/about">About</NavLink>
             </li>
             <li>
-              <NavLink to="/add" className="btn">Add</NavLink>
+              <NavLink to="/add" className="btn">+ Add</NavLink>
             </li>
           </ul>
         </div>
