@@ -95,7 +95,7 @@ export const Header = () => {
         matches.small ? (
           <Box sx={{ display: 'flex' }}>
             <CssBaseline />
-            <AppBar style={{backgroundColor: "var(--primary)"}} position="fixed" open={open}>
+            <AppBar style={{backgroundColor: "transparent", boxShadow: "none"}} position="fixed" open={open}>
               <Toolbar>
                 <Typography variant="h6" noWrap sx={{ flexGrow: 1 }} component="div">
                   WatchList
@@ -156,7 +156,7 @@ export const Header = () => {
 
                 <ul className="nav-links">
                   <li>
-                    <NavLink to="/bookshelf">Watch List</NavLink>
+                    <NavLink to="/bookshelf">WatchList</NavLink>
                   </li>
                   <li>
                     <NavLink to="/watched">Watched</NavLink>

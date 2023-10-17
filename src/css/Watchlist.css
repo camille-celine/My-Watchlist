@@ -1,8 +1,8 @@
 .movie-page {
   padding: 30px 0;
-  background-color: var(--white);
   border-radius: 5px;
   height: 100vh;
+  margin-top: 60px;
 }
 
 .movie-page .header {
@@ -11,10 +11,11 @@
   justify-content: space-between;
   margin-bottom: 30px;
   width: 100%;
+  font-size: 1.4rem;
 }
 
 .movie-page .heading {
-  color: var(--primary);
+  color: var(--white);
   margin: 0;
 }
 
@@ -47,7 +48,14 @@
   text-align: center;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 600px) {
+  .movie-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .movie-page {
+    margin-top: 0;
+  }
+
   .movie-page .heading {
     font-size: 1.5rem;
   }
@@ -55,3 +63,4 @@
     font-size: 1rem;
   }
 }
+

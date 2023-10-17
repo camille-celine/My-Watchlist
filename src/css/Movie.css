@@ -1,19 +1,25 @@
  /*  <---- Movie Page -----> */ 
 
  .movie {
-  background-color: var(--white);
   border-radius: 5px;
-  height: 100vh;
+  height: 100%;
 }
 
 .poster-wrapper img {
   width: 100%; 
+  max-height: 300px;
 }
 
 .movie .container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  background-color: var(--white);
+  border-radius: 5px;
+  margin: 50px auto;
+  padding: 30px;
+  overflow: scroll;
 }
 
 .movie .title {
@@ -26,4 +32,10 @@
 
 .movie img {
  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  .movie .container {
+    margin: 0;
+  }
 }
