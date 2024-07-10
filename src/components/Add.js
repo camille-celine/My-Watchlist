@@ -6,6 +6,7 @@ export const Add = () => {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
 
+
   const onChange = e => {
     e.preventDefault();
     setQuery(e.target.value);
@@ -33,7 +34,7 @@ export const Add = () => {
               onChange={onChange}
             />
           </div>
-          {results.length > 0 && (
+          {results.length > 1 && (
             <ul className="results">
              {results.map(movie => (
                <li key={movie.id}>
