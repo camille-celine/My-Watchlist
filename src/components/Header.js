@@ -133,7 +133,8 @@ export const Header = () => {
               </DrawerHeader>
               <Divider />
               <List>
-                {[ <NavLink style ={{textDecoration: "none", color: "var(--primary)", fontWeight: 800, fontSize: "1.1rem"}} to="/bookshelf">WatchList</NavLink>, 
+                {[ 
+                // <NavLink style ={{textDecoration: "none", color: "var(--primary)", fontWeight: 800, fontSize: "1.1rem"}} to="/bookshelf">WatchList</NavLink>, 
                 <NavLink style ={{textDecoration: "none", color: "var(--primary)", fontWeight: 800, fontSize: "1.1rem"}} to="/watched">Watched</NavLink>, 
                 <NavLink style ={{textDecoration: "none", color: "var(--primary)", fontWeight: 800, fontSize: "1.1rem"}} to="/add"> Add</NavLink>,  
                 <NavLink style ={{textDecoration: "none", color: "var(--primary)", fontWeight: 800, fontSize: "1.1rem"}} to="/about">About</NavLink>].map((text) => (
