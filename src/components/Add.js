@@ -4,7 +4,7 @@ import '../css/Add.css';
 
 export const Add = () => {
   const [query, setQuery] = useState("");
-  const [results, setResults] = useState([]);
+  const [solutions, setSolutions] = useState([]);
 
 
   const onChange = e => {
@@ -17,10 +17,14 @@ export const Add = () => {
       .then(res => res.json())
       .then((data) => {
         if(!data.errors) {
-          setResults(data.results);
+          setSolutions(data.results);
         } else {
-          setResults([]);
+          setSolutions([]);
         }
+        console.log(query);
+        console.log(solutions.typeof);
+        console.log(solutions);
+        console.log(data);
       });
   };
   return (
@@ -34,9 +38,9 @@ export const Add = () => {
               onChange={onChange}
             />
           </div>
-          {results.length > 1 && (
+          {solutions.length > 1 && (
             <ul className="results">
-             {results.map(movie => (
+             {solutions.map(movie => (
                <li key={movie.id}>
                  <ResultCard movie={movie}/>
                 </li>

@@ -20,8 +20,7 @@ function App() {
         <Header/>
 
         <Routes>
-          <Route path='*' element={<NotFound />} />
-          <Route exact path="/bookshelf" element={<Watchlist/>}/>
+          <Route path='*' element={<Watchlist/>} />
           <Route exact path="/watched" element={<Watched/>}/>
           <Route exact path="/add" element={<Add/>}/>
           <Route exact path="/about" element={<About/>}/>
