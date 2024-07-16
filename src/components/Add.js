@@ -4,7 +4,7 @@ import '../css/Add.css';
 
 export const Add = () => {
   const [query, setQuery] = useState("");
-  const [solutions, setSolutions] = useState([]);
+  const [results, setResults] = useState([]);
 
 
   const onChange = e => {
@@ -12,19 +12,16 @@ export const Add = () => {
     setQuery(e.target.value);
 
     fetch(
-      `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=1&include_adult=false&query=${query}`
+      `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=1&include_adult=false&query=${e.target.value}`
     )
       .then(res => res.json())
       .then((data) => {
         if(!data.errors) {
-          setSolutions(data.results);
+          setResults(data.results);
         } else {
-          setSolutions([]);
+          setResults([]);
         }
-        console.log(query);
-        console.log(solutions.typeof);
-        console.log(solutions);
-        console.log(data);
+        console.log(results);
       });
   };
   return (
@@ -38,9 +35,9 @@ export const Add = () => {
               onChange={onChange}
             />
           </div>
-          {solutions.length > 1 && (
+          {results.length > 1 && (
             <ul className="results">
-             {solutions.map(movie => (
+             {results.map(movie => (
                <li key={movie.id}>
                  <ResultCard movie={movie}/>
                 </li>
